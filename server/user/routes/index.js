@@ -1,0 +1,50 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const verifyToken_1 = __importDefault(require("../verifyToken"));
+const analytics_1 = __importDefault(require("./analytics"));
+const auth_1 = __importDefault(require("./auth"));
+const automaticDeposit_1 = __importDefault(require("./automaticDeposit"));
+const dashboard_1 = __importDefault(require("./dashboard"));
+const fetch_1 = __importDefault(require("./fetch"));
+const incomeHistory_1 = __importDefault(require("./incomeHistory"));
+const manualDeposit_1 = __importDefault(require("./manualDeposit"));
+const myReferral_1 = __importDefault(require("./myReferral"));
+const network_1 = __importDefault(require("./network"));
+const pages_1 = __importDefault(require("./pages"));
+const plan_1 = __importDefault(require("./plan"));
+const support_1 = __importDefault(require("./support"));
+const totalTeam_1 = __importDefault(require("./totalTeam"));
+const transaction_1 = __importDefault(require("./transaction"));
+const transferPayment_1 = __importDefault(require("./transferPayment"));
+const upload_1 = __importDefault(require("./upload"));
+const users_1 = __importDefault(require("./users"));
+const verifyPayment_1 = __importDefault(require("./verifyPayment"));
+const withdraw_1 = __importDefault(require("./withdraw"));
+const router = express_1.default.Router();
+// user routes
+// !Non-Authorization Based Routes
+router.use("/upload", upload_1.default);
+router.use("/auth", auth_1.default);
+router.use("/pages", pages_1.default);
+router.use("/verify-payment", verifyPayment_1.default);
+router.use("/fetch", fetch_1.default);
+// !Authorization Based Routes
+router.use("/dashboard", verifyToken_1.default, dashboard_1.default);
+router.use("/user", verifyToken_1.default, users_1.default);
+router.use("/network", verifyToken_1.default, network_1.default);
+router.use("/total-team", verifyToken_1.default, totalTeam_1.default);
+router.use("/transaction", verifyToken_1.default, transaction_1.default);
+router.use("/my-referral", verifyToken_1.default, myReferral_1.default);
+router.use("/transfer-payment", verifyToken_1.default, transferPayment_1.default);
+router.use("/withdraw", verifyToken_1.default, withdraw_1.default);
+router.use("/deposit/instant", verifyToken_1.default, automaticDeposit_1.default);
+router.use("/deposit/manual", verifyToken_1.default, manualDeposit_1.default);
+router.use("/income-history", verifyToken_1.default, incomeHistory_1.default);
+router.use("/support", verifyToken_1.default, support_1.default);
+router.use("/plan", verifyToken_1.default, plan_1.default);
+router.use("/analytics", verifyToken_1.default, analytics_1.default);
+exports.default = router;

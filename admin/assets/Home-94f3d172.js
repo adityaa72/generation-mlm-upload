@@ -1,0 +1,1 @@
+import{u as t,A as a,e as o}from"./index-7ce534fb.js";import{r}from"./warn-once-223a138d.js";const m=()=>{const e=t();return r.useEffect(()=>{e(a.login)},[]),o("div",{children:"Home"})};export{m as default};

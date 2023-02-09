@@ -1,0 +1,1 @@
+import{e,P as a}from"./index-7ce534fb.js";import"./warn-once-223a138d.js";import{H as n}from"./HeaderBreadcrumbs-7dcdcbac.js";function t(){return e(a,{title:"Login Page",children:e(n,{heading:"Login Page",links:[{name:"Manage Section"},{name:"Login Page"}]})})}export{t as default};

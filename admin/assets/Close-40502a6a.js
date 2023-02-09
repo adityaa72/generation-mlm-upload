@@ -1,0 +1,1 @@
+import"./warn-once-223a138d.js";import{W as o,e as a}from"./index-7ce534fb.js";const s=o(a("path",{d:"M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"}),"Close");export{s as C};

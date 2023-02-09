@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const router = express_1.default.Router();
+const users_1 = require("../controllers/users");
+router.get("/wallet", users_1.getWalletDetails);
+router.get("/profile", users_1.getProfile);
+router.patch("/profile", users_1.updateProfile);
+router.post("/profile/update-avatar", users_1.updateAvatar);
+router.post("/change-password", users_1.changePassword);
+router.get("/contact-details", users_1.getContactDetails);
+router.patch("/contact-details", users_1.updateContactDetails);
+router.put("/verify-kyc", users_1.createUserVerifyKyc);
+router.post("/login-session", users_1.getLoginSessionData);
+router.patch("/expire-token/:id", users_1.expireLoginSessionToken);
+router.patch("/logout-all", users_1.expireAllLoginSessionToken);
+router.patch("/two-fa", users_1.setTwoAuthVerification);
+exports.default = router;

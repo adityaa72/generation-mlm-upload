@@ -1,0 +1,1 @@
+import{e,P as a}from"./index-7ce534fb.js";import"./warn-once-223a138d.js";import{H as n}from"./HeaderBreadcrumbs-7dcdcbac.js";function o(){return e(a,{title:"Package Section",children:e(n,{heading:"Package Section",links:[{name:"Manage Section"},{name:"Package Section"}]})})}export{o as default};

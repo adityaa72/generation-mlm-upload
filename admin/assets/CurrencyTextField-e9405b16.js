@@ -1,0 +1,1 @@
+import{bF as i,e as r,bG as s,aQ as c,p as t}from"./index-7ce534fb.js";import"./warn-once-223a138d.js";const d=n=>{const{currency:e,currencyPosition:o}=i();return r(s,{decimalScale:2,customInput:c,InputProps:{...o==="prefix"?{startAdornment:r(t,{children:e})}:{endAdornment:r(t,{children:e})}},fullWidth:!0,...n})};export{d as C};

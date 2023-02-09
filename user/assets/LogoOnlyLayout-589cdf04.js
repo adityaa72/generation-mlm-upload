@@ -1,0 +1,1 @@
+import{s as t,a as n,F as o,j as s,aD as i,aE as e}from"./index-a3673b34.js";const r=t("header")(({theme:a})=>({top:0,left:0,lineHeight:0,width:"100%",position:"absolute",padding:a.spacing(3,3,0),[a.breakpoints.up("sm")]:{padding:a.spacing(5,5,0)}}));function p(){return n(o,{children:[s(r,{children:s(i,{})}),s(e,{})]})}export{p as L};

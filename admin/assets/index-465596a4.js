@@ -1,0 +1,1 @@
+import{e,P as a}from"./index-7ce534fb.js";import"./warn-once-223a138d.js";import{H as i}from"./HeaderBreadcrumbs-7dcdcbac.js";function o(){return e(a,{title:"Privacy Section",children:e(i,{heading:"Privacy Section",links:[{name:"Manage Section"},{name:"Privacy Section"}]})})}export{o as default};

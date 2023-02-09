@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const router = express_1.default.Router();
+const report_1 = require("../controllers/report");
+router.post("/joining", report_1.joiningList);
+router.post("/transaction", report_1.transactionList);
+router.post("/referral-income", report_1.referralIncomeList);
+router.post("/top-sponsors", report_1.topSponsorsList);
+router.post("/top-earners", report_1.topEarnersList);
+router.post("/roi-income/:status", report_1.roiIncomeList);
+router.post("/analytics/registrations", report_1.registrationAnalyticsData);
+router.post("/analytics/deposit", report_1.depositAnalyticsData);
+router.post("/analytics/withdraw", report_1.withdrawAnalyticsData);
+router.get("/transaction/transaction-data/:id", report_1.getTransactionData);
+router.get("/investment/plan", report_1.getPlansInvestmentList);
+router.post("/investment/users", report_1.getUsersInvestmentList);
+exports.default = router;

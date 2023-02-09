@@ -1,0 +1,45 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const verifyToken_1 = __importDefault(require("../verifyToken"));
+const auth_1 = __importDefault(require("./auth"));
+const changePassword_1 = __importDefault(require("./changePassword"));
+const dashboard_1 = __importDefault(require("./dashboard"));
+const deposit_1 = __importDefault(require("./deposit"));
+const install_1 = __importDefault(require("./install"));
+const kyc_1 = __importDefault(require("./kyc"));
+const manageSection_1 = __importDefault(require("./manageSection"));
+const network_1 = __importDefault(require("./network"));
+const paymentGateways_1 = __importDefault(require("./paymentGateways"));
+const planSetting_1 = __importDefault(require("./planSetting"));
+const profile_1 = __importDefault(require("./profile"));
+const report_1 = __importDefault(require("./report"));
+const support_1 = __importDefault(require("./support"));
+const systemConfiguration_1 = __importDefault(require("./systemConfiguration"));
+// admin routes
+const upload_1 = __importDefault(require("./upload"));
+const user_1 = __importDefault(require("./user"));
+const withdraw_1 = __importDefault(require("./withdraw"));
+const router = express_1.default.Router();
+router.use("/upload", upload_1.default);
+router.use("/auth", auth_1.default);
+router.use("/network", verifyToken_1.default, network_1.default);
+router.use("/profile", verifyToken_1.default, profile_1.default);
+router.use("/support", verifyToken_1.default, support_1.default);
+router.use("/user", verifyToken_1.default, user_1.default);
+router.use("/kyc", verifyToken_1.default, kyc_1.default);
+router.use("/deposit", verifyToken_1.default, deposit_1.default);
+router.use("/withdraw", verifyToken_1.default, withdraw_1.default);
+router.use("/report", verifyToken_1.default, report_1.default);
+router.use("/change-password", verifyToken_1.default, changePassword_1.default);
+router.use("/manage-section", verifyToken_1.default, manageSection_1.default);
+router.use("/system-configuration", verifyToken_1.default, systemConfiguration_1.default);
+router.use("/payment-gateways", verifyToken_1.default, paymentGateways_1.default);
+router.use("/plan-setting", verifyToken_1.default, planSetting_1.default);
+router.use("/dashboard", verifyToken_1.default, dashboard_1.default);
+// install
+router.use("/install", install_1.default);
+exports.default = router;

@@ -1,0 +1,1 @@
+import{D as f}from"./Dashboard-ed05a52c.js";import"./index-a3673b34.js";import"./warn-once-32b7c465.js";import"./HeaderBreadcrumbs-006bc24f.js";import"./CardHeader-a92719a0.js";import"./CardContent-73270362.js";import"./Skeleton-179a775c.js";export{f as default};

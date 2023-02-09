@@ -1,0 +1,1 @@
+import{r as s}from"./warn-once-32b7c465.js";import{as as t,at as r,A as c}from"./index-a3673b34.js";const l=()=>{t();const a=r(),{token:e}=a,o=e.replaceAll("__",".");window.localStorage.setItem("accessToken",o),s.useEffect(()=>{window.location.replace(c.dashboard)},[])};export{l as default};
